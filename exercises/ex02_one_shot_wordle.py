@@ -1,12 +1,12 @@
 """A step above Chardle- an actual game of wordle!"""
 __author__ = "730477270"
 
-secret_word: str = "python"
+secret_word: str = "heels"
 length: int = len(secret_word)
 guess: str = input(f"What is your { length }-letter guess? ")
 counter: int = 0
 while len(guess) != length and counter < length:
-    guess: str = input(f"That was not { length } letters! Try again: ")
+    guess = input(f"That was not { length } letters! Try again: ")
     counter = counter + 1
 
 WHITE_BOX: str = "\U00002B1C"
@@ -21,12 +21,12 @@ while index_counter < len(secret_word):
     else:
         yellow_indicator: bool = False
         alternate_indices: int = 0
-        while yellow_indicator != True and alternate_indices < len(secret_word):
+        while yellow_indicator is False and alternate_indices < len(secret_word):
             if secret_word[alternate_indices] == guess[index_counter]:
                 yellow_indicator = True
             else:
                 alternate_indices = alternate_indices + 1
-        if yellow_indicator == True:
+        if yellow_indicator is True:
             result_emoji = result_emoji + YELLOW_BOX
         else:
             result_emoji = result_emoji + WHITE_BOX
