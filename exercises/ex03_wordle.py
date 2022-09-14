@@ -1,9 +1,10 @@
 """Structured Wordle- getting even closer to the real thing!"""
 
-___author___ = 730477270
+__author__ = "730477270"
 
-def contains_char(secret_word: str, char: chr) -> bool:
-    """Function that scans the secret word for the presence of the guessed character. """
+
+def contains_char(secret_word: str, char: str) -> bool:
+    """Function that scans the secret word for the presence of the guessed character."""
     assert len(char) == 1
     index_counter: int = 0
     char_indicator: bool = False
@@ -63,12 +64,12 @@ def main() -> None:
         # while the user still has turns left and they have not yet won
         print(f"=== Turn { turn }/6 ===")
         guess = (input_guess(length))
-        print(emojified(guess, secret_word) ) 
+        print(emojified(guess, secret_word)) 
         if guess == secret_word:
             won = True
-            print(f"You won in { turn}/6 turns!" )
+            print(f"You won in { turn}/6 turns!")
         if turn == 6 and secret_word != guess:
-            print("X/6 - Sorry, try again tomorrow!" )
+            print("X/6 - Sorry, try again tomorrow!")
         turn = turn + 1
 
 
