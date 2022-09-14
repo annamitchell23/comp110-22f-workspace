@@ -1,7 +1,7 @@
 """A step above Chardle- an actual game of wordle!"""
 __author__ = "730477270"
 
-secret_word: str = "heels"
+secret_word: str = "python"
 length: int = len(secret_word)
 guess: str = input(f"What is your { length }-letter guess? ")
 counter: int = 0
