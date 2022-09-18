@@ -1,4 +1,4 @@
-"""Implementing algorithms and practicing lists"""
+"""Implementing algorithms and practicing lists."""
 
 __author__ = "730477270"
 
@@ -11,8 +11,6 @@ def all(a: list[int], b: int) -> bool:
     while i < length:
         if b != a[i] or length == 0:
             indicator = False
-        else:
-            indicator = True
         i = i + 1
     return indicator
 
