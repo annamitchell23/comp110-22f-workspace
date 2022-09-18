@@ -8,8 +8,10 @@ def all(a: list[int], b: int) -> bool:
     i: int = 0
     length: int = len(a)
     indicator: bool = True
+    if length == 0:
+        indicator = False
     while i < length:
-        if b != a[i] or length == 0:
+        if b != a[i]:
             indicator = False
         i = i + 1
     return indicator
@@ -23,7 +25,7 @@ def max(input: list[int]) -> int:
     i: int = 0
     while i < len(input):
         if input[i] > largest_number:
-           largest_number = input[i]
+            largest_number = input[i]
         i = i + 1
     return largest_number
         
