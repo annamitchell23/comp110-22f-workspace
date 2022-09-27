@@ -2,9 +2,6 @@
 __author__ = "730477270"
 
 
-from multiprocessing.dummy import Pool
-
-
 def only_evens(xs: list[int]) -> list[int]:
     """Returns all even integers of a list in a new list."""
     even_numbers: list[int] = []
@@ -12,6 +9,7 @@ def only_evens(xs: list[int]) -> list[int]:
         if item % 2 == 0:
             even_numbers.append(item)
     return even_numbers
+
 
 def concat(a: list[int], b: list[int]) -> list[int]:
     """Returns a new list containing the elements of first list followed by second list."""
@@ -21,6 +19,7 @@ def concat(a: list[int], b: list[int]) -> list[int]:
     for item in b:
         combined_list.append(item)
     return combined_list
+
 
 def sub(xs: list[int], start: int, end: int) -> list[int]:
     """Returns a list which is a subset of a given list, between the specified start index and the end index -1."""
@@ -37,4 +36,3 @@ def sub(xs: list[int], start: int, end: int) -> list[int]:
         sublist.append(xs[i])
         i += 1
     return sublist
-
